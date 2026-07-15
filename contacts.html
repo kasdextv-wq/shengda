@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шэнда — Мебель и сантехника из Китая оптом для B2B</title>
+  
+  <!-- Preload Critical Fonts to prevent layout shift and jerking -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm41xM11.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/cormorantgaramond/v16/co0lBwv8L0A98F798da8K4-28b965F2U.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Google Fonts Connection -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS Variables matching brand palette with strict premium feel */
+    :root {
+      --navy-dark: #0B1F3B;      /* Deep luxurious Prussian Blue */
+      --navy-muted: #4A607B;     /* Slate Blue */
+      --gold: #D0AE6F;           /* Champagne Gold / Brass */
+      --gold-dark: #B59353;
+      --gray-beige: #C9BFAF;     /* Warm grey/stone divider */
+      --milk: #F6F4EF;           /* Soft off-white parchment background */
+      --white: #FFFFFF;
+      --border-color: rgba(11, 31, 59, 0.12);
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-sans: 'Montserrat', sans-serif;
+      --transition-lux: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: var(--font-sans);
+      background-color: var(--milk);
+      color: var(--navy-dark);
+      line-height: 1.7;
+      font-size: 15px;
+      font-weight: 400;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Selection Color */
+    ::-moz-selection { background: var(--gold); color: var(--navy-dark); }
+    ::selection { background: var(--gold); color: var(--navy-dark); }
+
+    /* Typography (Bolder / Larger serif fonts for high legibility) */
+    h1, h2, h3, h4, h5, h6, .serif-font {
+      font-family: var(--font-serif);
+      font-weight: 600; /* Increased to 600 for better weight */
+      color: var(--navy-dark);
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      color: var(--navy-muted);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition-lux);
+    }
+
+    /* Buttons Style (Strict Square, Sharp, Elegant Minimalist) */
+    .btn {
+      position: relative;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+      transition: var(--transition-lux);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 36px;
+      border-radius: 0 !important; /* Force strict sharp square corners */
+      overflow: hidden;
+    }
+
+    .btn-gold {
+      background-color: var(--gold);
+      color: var(--navy-dark);
+      border: 1px solid var(--gold);
+    }
+
+    .btn-gold:hover {
+      background-color: var(--navy-dark);
+      color: var(--white);
+      border-color: var(--navy-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-navy {
+      background-color: var(--navy-dark);
+      color: var(--white);
+      border: 1px solid var(--navy-dark);
+    }
+
+    .btn-navy:hover {
+      background-color: transparent;
+      color: var(--navy-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 1px solid var(--navy-dark);
+      color: var(--navy-dark);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--navy-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-gold {
+      background-color: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .btn-outline-gold:hover {
+      background-color: var(--gold);
+      color: var(--navy-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Layout & Spacing */
+    .container {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    section {
+      padding: 120px 0;
+      position: relative;
+    }
+
+    /* Section Header Design */
+    .section-header {
+      max-width: 850px;
+      margin-bottom: 70px;
+    }
+
+    .section-header .sub {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold-dark);
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .section-header h2 {
+      font-size: 52px;
+      line-height: 1.15;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .section-header p {
+      font-size: 17px;
+      font-weight: 400;
+      max-width: 700px;
+    }
+
+    /* Minimalist Elegant Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--milk);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--navy-dark);
+    }
+
+    /* Header / Navigation (Fixed height, layout-shift proof) */
+    header {
+      background-color: rgba(11, 31, 59, 0.98);
+      backdrop-filter: blur(10px);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(208, 174, 111, 0.15);
+      height: 78px; /* Fixed height to prevent loading layout shift */
+      box-sizing: border-box;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+    }
+
+    .nav-link {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(246, 244, 239, 0.8);
+      padding: 10px 0;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--gold);
+      transition: var(--transition-lux);
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--gold);
+    }
+
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+
+    .header-contacts {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .header-phone {
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      color: var(--white);
+    }
+
+    .header-phone:hover {
+      color: var(--gold);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: var(--white);
+      background: none;
+      border: none;
+    }
+
+    /* Perfect 100vh Hero Section with No White Bar Bottom */
+    .page-hero {
+      background-color: var(--navy-dark);
+      color: var(--white);
+      height: calc(100vh - 78px); /* Perfect fit height subtraction */
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Subpage heroes with FIXED white text color */
+    .subpage-hero {
+      background-color: var(--navy-dark);
+      color: var(--white);
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      color: var(--white) !important; /* Force visible crisp white titles */
+      font-size: 72px;
+      font-weight: 600;
+      font-family: var(--font-serif);
+      line-height: 1.1;
+      margin-bottom: 30px;
+    }
+
+    .subpage-hero p {
+      color: rgba(246, 244, 239, 0.85) !important; /* Force visible light grey text */
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    .page-hero .container, .subpage-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-hero h1 {
+      font-size: 78px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 25px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .page-hero p {
+      font-size: 19px;
+      color: rgba(246, 244, 239, 0.85);
+      max-width: 800px;
+      margin: 0 auto 45px auto;
+      font-weight: 400;
+    }
+
+    /* Minimalist Sticky Actions */
+    .sticky-actions {
+      position: fixed;
+      right: 40px;
+      bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 999;
+    }
+
+    .sticky-btn {
+      width: 50px;
+      height: 50px;
+      border: none;
+      background-color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(11, 31, 59, 0.15);
+      position: relative;
+      border-radius: 50%;
+      transition: var(--transition-lux);
+    }
+
+    .sticky-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .sticky-tg {
+      background-color: #26A5E4;
+    }
+    .sticky-wa {
+      background-color: #25D366;
+    }
+    .sticky-request {
+      background-color: var(--gold);
+      color: var(--navy-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .sticky-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(11, 31, 59, 0.25);
+    }
+
+    .sticky-tooltip {
+      position: absolute;
+      right: 65px;
+      background-color: var(--navy-dark);
+      color: var(--white);
+      padding: 8px 15px;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition-lux);
+      border: 1px solid var(--gold);
+    }
+
+    .sticky-btn:hover .sticky-tooltip {
+      opacity: 1;
+    }
+
+    /* Editorial B2B Forms */
+    .form-box {
+      background-color: var(--white);
+      padding: 60px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      box-shadow: 0 30px 60px rgba(11, 31, 59, 0.03);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .form-full {
+      grid-column: span 2;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 10px;
+      color: var(--navy-dark);
+    }
+
+    .form-control {
+      padding: 15px 0;
+      border: none;
+      border-bottom: 1px solid var(--gray-beige);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--navy-dark);
+      background-color: transparent;
+      border-radius: 0;
+      transition: var(--transition-lux);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-bottom-color: var(--navy-dark);
+    }
+
+    select.form-control {
+      padding: 15px 0;
+      cursor: pointer;
+    }
+
+    textarea.form-control {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .file-upload-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .file-upload-btn {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px 0;
+      border-bottom: 1px dashed var(--gray-beige);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--navy-muted);
+      transition: var(--transition-lux);
+    }
+
+    .file-upload-btn:hover {
+      color: var(--gold);
+    }
+
+    .file-upload-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    /* Minimalist Elegant Footer */
+    footer {
+      background-color: var(--navy-dark);
+      color: var(--white);
+      padding: 120px 0 60px 0;
+      border-top: 1px solid rgba(208, 174, 111, 0.15);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 2fr;
+      gap: 60px;
+      margin-bottom: 80px;
+    }
+
+    .footer-col h4 {
+      color: var(--gold);
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+    }
+
+    .footer-about p {
+      font-size: 15px;
+      color: rgba(246, 244, 239, 0.7);
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: rgba(246, 244, 239, 0.8);
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+      padding-left: 5px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(246, 244, 239, 0.8);
+    }
+
+    .footer-contact-item .label {
+      color: var(--gold);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      min-width: 50px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(246, 244, 239, 0.5);
+    }
+
+    /* Elegant Editorial Grid System */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+    .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+
+    /* Custom Request List B2B Slider */
+    .drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(11, 31, 59, 0.4);
+      z-index: 2000;
+      display: none;
+      backdrop-filter: blur(15px);
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: -500px;
+      width: 100%;
+      max-width: 500px;
+      height: 100%;
+      background: var(--milk);
+      box-shadow: -20px 0 60px rgba(11, 31, 59, 0.15);
+      z-index: 2001;
+      transition: right 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid var(--border-color);
+    }
+
+    .drawer.active {
+      right: 0;
+    }
+
+    .drawer-header {
+      padding: 40px;
+      background: var(--navy-dark);
+      color: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .drawer-header h3 {
+      font-size: 32px;
+      font-family: var(--font-serif);
+      color: var(--white);
+    }
+
+    .drawer-close {
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 32px;
+      cursor: pointer;
+      transition: var(--transition-lux);
+    }
+
+    .drawer-close:hover {
+      color: var(--gold);
+    }
+
+    .drawer-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 40px;
+    }
+
+    .drawer-footer {
+      padding: 40px;
+      background: var(--white);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .request-item {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-color);
+      align-items: center;
+    }
+
+    .request-item-img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      background: var(--white);
+      border: 1px solid var(--border-color);
+    }
+
+    .request-item-details {
+      flex: 1;
+    }
+
+    .request-item-title {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--navy-dark);
+    }
+
+    .request-item-art {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--navy-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .request-item-qty {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .qty-btn {
+      width: 26px;
+      height: 26px;
+      background: var(--white);
+      border: 1px solid var(--gray-beige);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      cursor: pointer;
+      transition: var(--transition-lux);
+    }
+
+    .qty-btn:hover {
+      border-color: var(--navy-dark);
+    }
+
+    .qty-val {
+      font-size: 13px;
+      font-weight: 500;
+      width: 30px;
+      text-align: center;
+    }
+
+    .request-item-remove {
+      background: none;
+      border: none;
+      color: #D9534F;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .request-badge {
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-size: 9px;
+      font-weight: 600;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -5px;
+      right: -5px;
+    }
+
+    /* Interactive Premium Card Styles */
+    .editorial-card {
+      background-color: var(--white);
+      border: 1px solid var(--border-color);
+      transition: var(--transition-lux);
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .editorial-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(11, 31, 59, 0.05);
+    }
+
+    /* Popup Modal Styles */
+    .popup-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(11,31,59,0.5);
+      backdrop-filter: blur(15px);
+      z-index: 2600;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .popup-content {
+      background: var(--white);
+      width: 90%;
+      max-width: 800px;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 50px;
+      border-radius: 12px;
+      position: relative;
+      box-shadow: 0 40px 80px rgba(11,31,59,0.2);
+      border: 1px solid var(--border-color);
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      font-size: 32px;
+      background: none;
+      border: none;
+      color: var(--navy-dark);
+      cursor: pointer;
+    }
+
+    /* Vector/Fine Art Minimalist SVG Icon Designs */
+    .icon-vector-box {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(208, 174, 111, 0.3);
+      border-radius: 50%;
+      background: rgba(208, 174, 111, 0.05);
+      color: var(--gold);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 80px 0; }
+      .section-header h2 { font-size: 36px; }
+      .page-hero h1 { font-size: 40px; }
+      .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-full { grid-column: span 1; }
+      .nav-menu { display: none; }
+      .mobile-menu-toggle { display: block; }
+      .header-contacts { display: none; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (Strict layout to prevent layout shift) -->
+  <header>
+    <div class="container header-top">
+      <div class="logo-container">
+        <!-- SVG Logo Sign (Pre-loaded, perfectly centered, NO artifacts) -->
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+          <svg width="45" height="42" viewBox="0 0 94 88" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex-shrink: 0;">
+            <rect x="11.0683" y="67.8428" width="72.7923" height="10.2679" fill="#D0AE6F"/>
+            <path d="M93.0141 42.0738C92.6498 41.7832 92.1871 41.647 91.7263 41.6769C90.7729 41.7483 89.8015 41.9748 88.8919 42.3654C82.4541 45.6953 81.4113 52.3982 81.1403 58.123C81.0666 61.6302 81.0299 65.1504 81.0299 68.6644V72.9765C81.0314 76.1079 81.3868 81.8591 81.6315 85.8182L81.6381 85.9254C81.7034 86.9816 82.5789 87.8046 83.6372 87.8046H84.8163C85.9678 87.8046 86.8811 86.8366 86.8139 85.6871C86.5848 81.7668 86.27 75.9878 86.2688 72.9765V68.6644C86.2688 65.1504 86.2321 61.6302 86.1585 58.123L86.1577 58.0704C86.048 53.489 87.1623 47.798 90.5452 45.8253C91.0346 45.5459 91.5742 45.3449 92.164 45.2275C92.6183 45.1446 93.0338 44.9005 93.3166 44.5302C93.5995 44.1601 93.7268 43.697 93.6704 43.2395C93.614 42.7822 93.3782 42.3642 93.0141 42.0738Z" fill="#D0AE6F"/>
+            <path d="M0.669402 42.0738C1.03368 41.7832 1.49636 41.647 1.9572 41.6769C2.91054 41.7483 3.88193 41.9748 4.79152 42.3654C11.2294 45.6953 12.2722 52.3982 12.5432 58.123C12.6168 61.6302 12.6535 65.1504 12.6535 68.6644V72.9765C12.6521 76.1079 12.2967 81.8591 12.052 85.8182L12.0454 85.9254C11.9801 86.9816 11.1046 87.8046 10.0463 87.8046H8.86715C7.71566 87.8046 6.80235 86.8366 6.86953 85.6871C7.09861 81.7668 7.41345 75.9878 7.41462 72.9765V68.6644C7.41463 65.1504 7.45133 61.6302 7.52499 58.123L7.52572 58.0704C7.63546 53.489 6.52113 47.798 3.13829 45.8253C2.64883 45.5459 2.10927 45.3449 1.51941 45.2275C1.06511 45.1446 0.64965 44.9005 0.366821 44.5302C0.0839701 44.1601 -0.0432949 43.697 0.0130787 43.2395C0.0694647 42.7822 0.305276 42.3642 0.669402 42.0738Z" fill="#D0AE6F"/>
+            <path d="M12.3614 45.4111V8.39014C12.3614 6.38755 12.1987 4.90287 11.8735 3.93611C11.5483 2.90028 10.9246 2.20979 10.003 1.86446C9.81628 1.77529 9.67631 1.69572 9.55316 1.62573C9.10459 1.37057 8.88021 1.24303 7.43381 1.24303C7.32546 1.24303 7.27119 1.03583 7.27119 0.621516C7.27119 0.207202 7.32546 0 7.43381 0L10.6948 9.13591e-05L16.3304 0L22.5066 9.13591e-05L26.1529 0C26.3157 0 26.397 0.207202 26.397 0.621516C26.397 1.03583 26.3157 1.24303 26.1529 1.24303C24.7699 1.24303 24.5406 1.36682 24.082 1.61441C23.9473 1.68713 23.7929 1.77045 23.5837 1.86446C22.7164 2.20979 22.12 2.90028 21.7947 3.93611C21.5236 4.90287 21.388 6.38755 21.388 8.39014V56.1414C21.388 58.2821 21.4423 59.8013 21.5508 60.699C21.7134 61.5967 22.0657 62.1492 22.6078 62.3563C23.2042 62.4944 24.1531 62.5635 25.4542 62.5635H37.8149C39.2246 62.5635 40.2275 62.4599 40.8239 62.2527C41.4744 61.9765 41.8811 61.3895 42.0437 60.4918C42.2064 59.5251 42.2877 58.0749 42.2877 56.1414V8.39014C42.2877 6.38755 42.125 4.90287 41.7998 3.93611C41.5287 2.90028 40.9323 2.20979 40.0106 1.86446C39.8014 1.77045 39.647 1.68713 39.5124 1.61441C39.0537 1.36682 38.8244 1.24303 37.4414 1.24303C37.2788 1.24303 37.1975 1.03583 37.1975 0.621516C37.1975 0.207202 37.2788 0 37.4414 0C38.3631 0.0690674 39.5277 0 39.5277 0H43.7971H46.8604H52.6012H56.2418C56.3504 0 56.4045 0.207202 56.4045 0.621516C56.4045 1.03583 56.3504 1.24303 56.2418 1.24303C54.8589 1.24303 54.6295 1.36682 54.1709 1.61441C54.0363 1.68713 53.8819 1.77045 53.6726 1.86446C52.751 2.20979 52.1276 2.90028 51.8023 3.93611C51.4769 4.90287 51.3143 6.38755 51.3143 8.39014V56.1414C51.3143 58.2821 51.3686 59.8013 51.4769 60.699C51.6395 61.5967 51.992 62.1492 52.5341 62.3563C53.1305 62.4944 54.1064 62.5635 55.4616 62.5635H67.8225C69.3405 62.5635 70.3977 62.4599 70.9941 62.2527C71.5905 62.0456 71.9428 61.4931 72.0513 60.5954C72.214 59.6978 72.2953 58.2131 72.2953 56.1414V8.39014C72.2953 6.38755 72.1327 4.90287 71.8072 3.93611C71.5363 2.90028 70.0182 1.86446 69.8315 1.77529 69.6915 1.69572 69.5684 1.62573C69.1198 1.37057 68.8954 1.24303 67.449 1.24303C67.3405 1.24303 67.2864 1.03583 67.2864 0.621516C67.2864 0.207202 67.3405 0 67.449 0L71.1982 9.13591e-05L77.373 0H82.7521H86.1682C86.3308 0 86.4121 0.207202 86.4121 0.621516C86.4121 1.03583 86.3308 1.24303 86.1682 1.24303C84.7852 1.24303 84.5558 1.36682 84.0972 1.61441C83.9626 1.68713 83.8082 1.77045 83.599 1.86446C82.6773 2.20979 81.7285 3.93611 81.4575 4.90287 81.3219 6.38755 81.3219 8.39014V45.4109C79.0648 49.0787 78.4405 53.3538 78.2115 56.8764L78.1479 58.021L78.1472 58.0604C78.1006 60.2829 78.0686 62.5107 78.0513 64.7387H15.6318C15.6147 62.5107 15.5827 60.2829 15.5359 58.0604L15.5352 58.021L15.4716 56.8764C15.2428 53.3539 14.6185 49.0789 12.3614 45.4111Z" fill="#D0AE6F"/>
+          </svg>
+          <!-- Exact uncorrupted path rendering for Logo name gold -->
+          <svg width="125" height="20" viewBox="0 0 318 52" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin-left: 15px;">
+            <path d="M282.234 30.0961L283.761 28.6767H304.724L305.436 30.0961H282.234ZM317.482 42.2442C317.662 42.2442 317.753 42.3793 317.753 42.6497C317.753 42.9201 317.662 43.0552 317.482 43.0552C316.175 43.0552 315.012 43.0552 315.012 43.0552H311.206H307.38C307.38 43.0552 306.732 43.0552 305.471 43.0552C305.29 43.0552 305.2 42.9201 305.2 42.6497C305.2 42.3793 305.29 42.2442 305.471 42.2442C307.859 42.2442 307.849 41.9062 308.435 41.2303C309.021 40.5093 308.863 39.18 307.962 37.2425L292.957 5.54243L294.646 3.44712L281.534 34.4712C280.407 37.2199 280.34 39.2026 281.331 40.4192C282.322 41.6358 282.786 42.2442 285.715 42.2442C285.94 42.2442 286.052 42.3793 286.052 42.6497C286.052 42.9201 285.94 43.0552 285.715 43.0552C284.363 43.0552 283.519 43.0552 283.519 43.0552H279.245H275.291C275.291 43.0552 274.694 43.0552 273.298 43.0552C273.117 43.0552 273.027 42.9201 273.027 42.6497C273.027 42.3793 273.117 42.2442 273.298 42.2442C274.514 42.2442 275.092 42.1906 275.761 41.4535C276.429 40.7163 276.712 40.239 277.478 39.0674C278.289 37.8508 279.168 36.1159 280.114 33.8629L294.376 0.202773C294.466 0.0675906 294.624 0 294.849 0C295.074 0 295.21 0.0675906 295.255 0.202773L311.206 33.7953C312.242 36.0033 313.166 37.7381 313.977 38.9998C314.694 40.2653 314.989 41.0839 315.611 41.5021C316.232 41.9203 316.536 42.2442 317.482 42.2442Z" fill="#D0AE6F"/>
+            <path d="M259.2 42.2441C259.606 42.2441 259.831 42.2892 259.876 42.3793C259.966 42.4243 260.011 42.6496 260.011 43.0552C260.011 43.686 260.011 45.0829 260.011 45.0829V48.33V51.2621C260.011 51.4423 259.876 51.5325 259.606 51.5325C259.335 51.5325 259.2 51.4423 259.2 51.2621C259.2 47.432 257.736 46.1095 256.023 44.262C254.356 42.4596 251.585 43.0552 247.71 43.0552H226.554C224.797 43.0552 223.219 43.3706 221.823 44.0015C220.471 44.6774 220.124 44.7984 218.646 45.9518C217.168 47.1051 216.753 48.3977 216.753 51.2816C216.753 51.4618 216.618 51.552 216.348 51.552C216.077 51.552 215.942 51.4618 215.942 51.2816L215.942 49.6115L215.942 46.6779L215.942 44.7012C215.942 44.7012 215.942 43.5734 215.942 42.9876C215.942 42.6271 215.965 42.4018 216.01 42.3117C216.1 42.2216 216.303 42.1765 216.618 42.1765C218.556 42.1765 220.268 41.5457 221.755 40.284C223.287 38.9772 224.639 37.2649 225.81 35.1471C227.027 33.0292 228.063 30.6861 228.92 28.1177C229.821 25.5492 230.542 22.9582 231.083 20.3447C231.623 17.6862 232.029 15.2078 232.299 12.9098C232.57 10.5666 232.705 8.60649 232.705 7.02937C232.705 5.94792 232.57 5.00165 232.299 4.19057C232.029 3.37948 231.712 2.54376 230.721 2.09315C229.774 1.64255 229.425 1.62212 227.307 1.62212C227.217 1.62212 227.172 1.48694 227.172 1.21658C227.172 0.946216 227.217 0.811035 227.307 0.811035C227.578 0.811035 228.321 0.811035 229.538 0.811035C230.799 0.811035 230.88 0.811035 232.772 0.811035C234.665 0.811035 236.693 0.811035 238.855 0.811035C241.063 0.811035 243.249 0.811035 245.412 0.811035C247.575 0.811035 249.58 0.811035 251.427 0.811035C253.275 0.811035 253.287 0.811035 254.459 0.811035C255.631 0.811035 256.307 0.811035 256.487 0.811035C256.577 0.811035 256.622 0.946216 256.622 1.21658C256.622 1.48694 256.577 1.62212 256.487 1.62212C254.82 1.62212 254.342 1.62212 253.792 1.93649C253.242 2.25085 252.779 2.70357 252.509 3.37948C252.238 4.01033 252.103 4.97912 252.103 6.28588V37.5804C252.103 38.7069 252.126 39.6081 252.171 40.284C252.261 40.9148 252.509 41.3654 252.914 41.6358C253.32 41.9061 253.996 42.0864 254.942 42.1765C255.933 42.2216 257.353 42.2441 259.2 42.2441ZM247.71 37.4452V6.42106C247.71 5.02418 247.62 4.05539 247.439 3.51466C247.304 2.92887 246.876 2.59092 246.155 2.5008C245.434 2.36562 244.195 2.29803 242.438 2.29803H239.126C237.819 2.29803 236.873 2.5008 236.287 2.90634C235.701 3.31189 235.318 4.07791 235.138 5.20443C234.958 6.33094 234.777 7.99817 234.597 10.2061C234.507 11.0172 234.349 12.2564 234.124 13.9236C233.899 15.5909 233.561 17.4834 233.11 19.6012C232.705 21.7191 232.186 23.9496 231.556 26.2927C230.925 28.5908 230.181 30.8213 229.325 32.9842C228.469 35.1471 227.478 37.0622 226.351 38.7294C225.225 40.3516 223.94 41.5907 222.499 42.4469V41.5682H242.1C243.947 41.5682 245.254 41.5006 246.02 41.3654C246.831 41.2302 247.304 40.8923 247.439 40.3516C247.62 39.7658 247.71 38.797 247.71 37.4452Z" fill="#D0AE6F"/>
+            <path d="M183.228 6.42104C183.228 5.11429 183.092 4.12296 182.822 3.44706C182.552 2.77115 181.988 2.29802 181.132 2.02765C180.321 1.75729 180.559 1.82488 178.802 1.82488C178.667 1.82488 178.599 1.6897 178.599 1.41934C178.599 1.14898 178.667 1.01379 178.802 1.01379C179.884 1.01379 180.967 1.0138 180.967 1.0138L185.458 1.01379L189.814 1.01381C189.814 1.01381 190.885 1.01381 191.922 1.01381C192.057 1.01381 192.125 1.14899 192.125 1.41936C192.125 1.68972 192.057 1.8249 191.92 1.8249C190.255 1.8249 190.505 1.75729 189.649 2.02765C188.793 2.25295 188.229 2.70356 187.959 3.37947C187.689 4.01031 187.553 4.97911 187.553 6.28586V37.5803C187.553 38.8871 187.689 39.8784 187.959 40.5543C188.229 41.2302 188.793 41.6808 189.649 41.9061C190.505 42.1314 190.253 42.1089 191.92 42.1089C192.056 42.1089 192.123 42.2441 192.123 42.5145C192.123 42.7848 192.056 42.92 191.92 42.92C190.884 42.92 189.816 42.92 189.816 42.92H185.458H180.921C180.921 42.92 179.869 42.92 178.788 42.92C178.652 42.92 178.585 42.7848 178.585 42.5145C178.585 42.2441 178.652 42.1089 178.788 42.1089C180.545 42.1089 180.321 42.1314 181.132 41.9061C181.988 41.6808 182.552 41.2302 182.822 40.5543C183.092 39.8784 183.228 38.8871 183.228 37.5803V6.42104ZM154.907 21.7641V20.3447H185.12V21.7641H154.907ZM152.947 37.5803V6.28586C152.947 4.97911 152.789 4.01031 152.474 3.37947C152.203 2.70356 151.64 2.25295 150.784 2.02765C149.973 1.75729 150.216 1.82488 148.549 1.82488C148.459 1.82488 148.414 1.6897 148.414 1.41934C148.414 1.14898 148.459 1.01379 148.549 1.01379C149.63 1.01379 150.72 1.01379 150.72 1.01379H155.042H159.594C159.594 1.01379 160.657 1.01379 161.738 1.01379C161.828 1.01379 161.873 1.14898 161.873 1.41934C161.873 1.6897 161.828 1.82488 161.738 1.82488C160.071 1.82488 160.119 1.82488 159.436 2.02765C158.753 2.23043 157.994 2.77115 157.678 3.44706C157.408 4.12296 157.273 5.11429 157.273 6.42104V37.5803C157.273 38.8871 157.408 39.8784 157.678 40.5543C157.949 41.2302 158.512 41.6808 159.368 41.9061C160.269 42.1314 160.068 42.1089 161.735 42.1089C161.825 42.1089 161.871 42.2441 161.871 42.5145C161.871 42.7848 161.825 42.92 161.735 42.92C160.609 42.92 159.495 42.92 159.495 42.92H155.042H150.719C150.719 42.92 149.577 42.92 148.496 42.92C148.406 42.92 148.361 42.7848 148.361 42.5145C148.361 42.2441 148.406 42.1089 148.496 42.1089C150.163 42.1089 149.928 42.1314 150.784 41.9061C151.64 41.6808 152.203 41.2302 152.474 40.5543C152.789 39.8784 152.947 38.8871 152.947 37.5803Z" fill="#D0AE6F"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M97.6806 0.131944C93.1225 0.459893 88.91 2.02665 85.3823 4.495C84.6402 5.0142 84.2276 5.87573 84.2173 6.78129L84.1639 11.4524C84.1639 11.5875 84.2766 11.6777 84.5019 11.7228C84.7272 11.7678 84.8624 11.7002 84.9073 11.5199C86.4394 7.82502 87.5853 5.11439 90.0636 3.44718C92.587 1.77988 97.173 0.946318 100.057 0.946318C103.166 0.946318 105.937 1.84748 108.371 3.64991C110.849 5.45233 112.786 8.0208 114.183 11.3552C115.319 13.9464 116.008 16.9429 116.249 20.3449C116.282 20.8104 116.307 21.2836 116.323 21.7643C116.339 22.2303 116.346 22.7034 116.346 23.1837C116.346 27.0588 115.783 30.4384 114.657 33.3222C113.53 36.161 111.795 38.3464 109.452 39.8785C107.154 41.4106 104.225 42.1766 100.665 42.1766C98.5474 42.1766 94.5921 41.8386 92.5643 41.1628C90.5818 40.4868 88.8244 39.4279 87.2924 37.986C86.0396 36.8069 85.6327 35.3163 85.1317 33.4817C85.0201 33.0725 84.9037 32.6464 84.7721 32.2027C84.7272 32.0675 84.5695 32.0225 84.2991 32.0675C84.0738 32.1126 83.961 32.2027 83.961 32.3379L83.9318 36.8997C83.926 37.807 84.3247 38.6772 85.0597 39.2093C88.9836 42.0501 93.7886 43.7612 98.9907 43.8617C101.788 43.808 104.463 43.2913 107.019 42.3118C109.767 41.2754 112.201 39.7659 114.319 37.7832C116.482 35.8005 118.171 33.3898 119.388 30.551C120.65 27.6671 121.28 24.4003 121.28 20.7504C121.28 18.1369 120.898 15.6135 120.131 13.1802C119.632 11.4648 118.907 9.87877 117.954 8.42241C117.531 7.77477 117.062 7.1528 116.549 6.55631C114.927 4.57364 112.764 2.9966 110.06 1.82501C107.402 0.653421 104.135 0.067627 100.26 0.067627C100.127 0.067627 99.9845 0.0684492 99.8338 0.070185C99.2257 0.0770369 98.4815 0.0975927 97.6806 0.131944Z" fill="#D0AE6F"/>
+            <path d="M0.147906 43.0553C0.0577855 43.0553 0.012725 42.9201 0.012725 42.6498C0.012725 42.3794 0.0577855 42.2442 0.147906 42.2442C1.81514 42.2442 1.58001 42.1316 2.43616 41.9063C3.2923 41.681 3.85556 41.2303 4.12592 40.5544C4.44134 39.8785 4.59906 38.8872 4.59906 37.5805V6.28598C4.59906 4.97923 4.44134 4.01043 4.12592 3.37958C3.85556 2.70368 3.2923 2.25307 2.43616 2.02777C1.58001 1.75741 1.80242 1.82493 0.135186 1.82493C0.0450652 1.82493 4.6428e-06 1.68975 4.6428e-06 1.41939C4.6428e-06 1.14903 0.0450652 1.01385 0.135186 1.01385C1.21664 1.01385 2.31639 1.01391 2.31639 1.01391H6.62678H10.7498C10.7498 1.01391 11.6665 1.01391 12.6578 1.01391C12.793 1.01391 12.8606 1.14909 12.8606 1.41945C12.8606 1.68982 12.793 1.825 12.6578 1.825C11.1708 1.825 11.5158 1.75741 10.7498 2.02777C10.0288 2.25307 9.53317 2.70368 9.26281 3.37958C9.03751 4.01043 8.92486 4.97923 8.92486 6.28598V37.4453C8.92486 38.8421 9.01498 39.8335 9.19522 40.4193C9.37546 41.005 9.82607 41.3655 10.547 41.5007C11.268 41.5908 12.4846 41.6359 14.1969 41.6359H23.2541C25.1016 41.6359 26.4083 41.5683 27.1743 41.4331C27.9404 41.2979 28.4135 40.9375 28.5937 40.3517C28.774 39.7659 28.8641 38.7971 28.8641 37.4453V6.28598C28.8641 4.97923 28.7289 4.01043 28.4586 3.37958C28.2333 2.70368 27.7376 2.25307 26.9716 2.02777C26.2506 1.75741 26.5801 1.825 25.0931 1.825C24.9579 1.825 24.8904 1.68982 24.8904 1.41945C24.8904 1.14909 24.9579 1.01391 25.0931 1.01391H25.8207H28.4586C28.4586 1.01391 30.2384 1.01391 31.0946 1.01391C32.4464 1.01391 35.0401 1.01391 35.0401 1.01391C35.0401 1.01391 35.9963 1.01391 37.0327 1.01391C37.1229 1.01391 37.1679 1.14909 37.1679 1.41945C37.1679 1.68982 37.1229 1.825 37.0327 1.825C35.5457 1.825 35.9161 1.75741 35.15 2.02777C34.384 2.25307 33.8658 2.70368 33.5954 3.37958C33.3251 4.01043 33.1899 4.97923 33.1899 6.28598V37.5805C33.1899 38.8872 33.3701 39.8335 33.7306 40.4193C34.1362 40.96 34.767 41.2979 35.6232 41.4331C36.5244 41.5683 37.7635 41.6359 39.3407 41.6359H47.5191C49.4117 41.6359 50.7409 41.5683 51.507 41.4331C52.273 41.2979 52.7236 40.9375 52.8588 40.3517C53.039 39.7659 53.1291 38.7971 53.1291 37.4453V6.28598C53.1291 4.97923 52.994 4.01043 52.7236 3.37958C52.4983 2.70368 52.0026 2.25307 51.2366 2.02777C50.5156 1.75741 49.3601 1.75741 47.8731 1.75741C47.7379 1.75741 47.6703 1.62223 47.6703 1.35186C47.6703 1.0815 47.7379 0.94632 47.8731 0.94632C48.9095 0.94632 51.3042 0.94632 51.3042 0.94632H55.3821H59.6854C59.6854 0.94632 60.8246 0.94632 61.9061 0.94632C62.0413 0.94632 62.1089 1.0815 62.1089 1.35186C62.1089 1.62223 62.0413 1.75741 61.9061 1.75741C60.5406 1.75741 60.0763 1.75741 59.4057 2.02777C58.7351 2.29813 58.1759 2.70368 57.8605 3.37958C57.5901 4.01043 57.4549 4.97923 57.4549 6.28598V37.5805C57.4549 38.8872 57.5901 39.8785 57.8605 40.5544C58.1759 41.2303 58.7617 41.681 59.6179 41.9063C60.474 42.1316 60.2389 42.2442 61.9061 42.2442C62.0413 42.2442 62.1089 42.6498C62.1089 42.6498 61.9061 43.0553 61.9061 43.0553H0.147906Z" fill="#D0AE6F"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M95.0135 19.2476C94.9786 19.2069 94.9448 19.1652 94.9119 19.1227C94.8428 19.0661 94.7547 19.0321 94.6588 19.0321C94.4372 19.0321 94.2576 19.2134 94.2576 19.437V20.3448V21.7643V22.6722C94.2576 22.8959 94.4372 23.0771 94.6588 23.0771C94.7546 23.0771 94.8426 23.0431 94.9117 22.9866C94.9446 22.9439 94.9788 22.9022 95.0138 22.8612C95.5899 22.1897 96.4447 21.7643 97.3989 21.7643H116.323H117.331V20.3448H116.249H97.3989C96.4445 20.3448 95.5896 19.9193 95.0135 19.2476Z" fill="#D0AE6F"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Menu Navigation -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link" id="nav-home">Главная</a></li>
+        <li><a href="about.html" class="nav-link" id="nav-about">О компании</a></li>
+        <li><a href="catalog.html" class="nav-link" id="nav-catalog">Каталог</a></li>
+        <li><a href="custom.html" class="nav-link" id="nav-custom">Под заказ</a></li>
+        <li><a href="delivery.html" class="nav-link" id="nav-delivery">Доставка</a></li>
+        <li><a href="contacts.html" class="nav-link" id="nav-contacts">Контакты</a></li>
+      </ul>
+
+      <!-- Contacts & Actions -->
+      <div class="header-contacts">
+        <a href="tel:+74951234567" class="header-phone">+7 495 123 45 67</a>
+        <button class="btn btn-outline-gold" onclick="toggleRequestDrawer()" style="position: relative; padding: 12px 28px; font-size: 11px;">
+          Заявка на расчет
+          <span class="request-badge" id="header-request-count">0</span>
+        </button>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div id="mobile-menu" style="display: none; background-color: var(--navy-dark); border-bottom: 1px solid rgba(208, 174, 111, 0.15); padding: 25px 40px;">
+    <ul style="list-style: none; display: flex; flex-direction: column; gap: 20px;">
+      <li><a href="index.html" class="nav-link">Главная</a></li>
+      <li><a href="about.html" class="nav-link">О компании</a></li>
+      <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+      <li><a href="custom.html" class="nav-link">Под заказ</a></li>
+      <li><a href="delivery.html" class="nav-link">Доставка</a></li>
+      <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+    </ul>
+  </div>
+
+
+  <!-- Hero Section -->
+  <section class="subpage-hero" style="background-image: linear-gradient(rgba(11, 31, 59, 0.95), rgba(11, 31, 59, 0.95)), url('https://images.unsplash.com/photo-1620626011161-997c51917041?auto=format&fit=crop&w=1920&q=80');">
+    <div class="container">
+      <div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 25px;">
+        ШЭНДА • КОНТАКТНАЯ ИНФОРМАЦИЯ
+      </div>
+      <h1 style="font-size: 72px; font-weight: 300; font-family: var(--font-serif); line-height: 1.1; margin-bottom: 30px;">
+        Связь с B2B-отделом <br><span style="font-style: italic; color: var(--gold);">компании Шэнда</span>
+      </h1>
+      <p style="font-size: 18px; max-width: 800px; margin: 0 auto; color: rgba(246, 244, 239, 0.75); font-weight: 300;">
+        Мы всегда открыты для обсуждения проектной комплектации, кастомизации под ТЗ и долгосрочного оптового партнерства.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contacts Details & Form -->
+  <section style="background-color: var(--white); border-bottom: 1px solid var(--border-color); padding: 120px 0;">
+    <div class="container">
+      <div class="grid-2" style="gap: 100px;">
+        
+        <!-- Contact Information Block -->
+        <div>
+          <div style="width: 60px; height: 2px; background: var(--gold); margin-bottom: 35px;"></div>
+          <h2 style="font-size: 48px; font-weight: 500; line-height: 1.2; margin-bottom: 45px; font-family: var(--font-serif);">Представительство в России и фабрика в Китае</h2>
+          
+          <div style="display: flex; flex-direction: column; gap: 45px;">
+            <div style="display: flex; gap: 25px; align-items: flex-start;">
+              <!-- Fine Vector Icon -->
+              <span style="color: var(--gold); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(208, 174, 111, 0.05); border: 1px solid rgba(208, 174, 111, 0.2);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </span>
+              <div>
+                <h4 style="font-size: 13px; text-transform: uppercase; color: var(--navy-muted); margin-bottom: 8px; letter-spacing: 0.12em; font-weight: 700;">Отдел продаж в России</h4>
+                <a href="tel:+74951234567" style="font-size: 22px; font-weight: 700; color: var(--navy-dark); letter-spacing: -0.01em;">+7 (495) 123-45-67</a>
+                <p style="font-size: 14px; color: var(--navy-muted); margin-top: 5px; font-weight: 400;">Ежедневно с 09:00 до 20:00 (по московскому времени)</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 25px; align-items: flex-start;">
+              <!-- Fine Vector Icon -->
+              <span style="color: var(--gold); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(208, 174, 111, 0.05); border: 1px solid rgba(208, 174, 111, 0.2);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </span>
+              <div>
+                <h4 style="font-size: 13px; text-transform: uppercase; color: var(--navy-muted); margin-bottom: 8px; letter-spacing: 0.12em; font-weight: 700;">Электронная почта</h4>
+                <a href="mailto:b2b@shengda.ru" style="font-size: 22px; font-weight: 700; color: var(--navy-dark); letter-spacing: -0.01em;">b2b@shengda.ru</a>
+                <p style="font-size: 14px; color: var(--navy-muted); margin-top: 5px; font-weight: 400;">Для ТЗ, реквизитов и ведомостей комплектации проектов</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 25px; align-items: flex-start;">
+              <!-- Fine Vector Icon -->
+              <span style="color: var(--gold); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(208, 174, 111, 0.05); border: 1px solid rgba(208, 174, 111, 0.2);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </span>
+              <div>
+                <h4 style="font-size: 13px; text-transform: uppercase; color: var(--navy-muted); margin-bottom: 8px; letter-spacing: 0.12em; font-weight: 700;">Офис в РФ</h4>
+                <p style="font-size: 18px; font-weight: 700; color: var(--navy-dark); line-height: 1.5; margin-bottom: 5px;">Москва, Гринвуд, корпус 39, этаж 3, офис 36</p>
+                <p style="font-size: 14px; color: var(--navy-muted); font-weight: 400;">Бизнес-парк "Гринвуд" (посещение по предварительной записи)</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 25px; align-items: flex-start;">
+              <!-- Fine Vector Icon -->
+              <span style="color: var(--gold); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(208, 174, 111, 0.05); border: 1px solid rgba(208, 174, 111, 0.2);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="2" width="20" height="20" rx="2" />
+                  <path d="M9 22V12h6v10" />
+                </svg>
+              </span>
+              <div>
+                <h4 style="font-size: 13px; text-transform: uppercase; color: var(--navy-muted); margin-bottom: 8px; letter-spacing: 0.12em; font-weight: 700;">Адрес фабрики в Китае</h4>
+                <p style="font-size: 16px; font-weight: 700; color: var(--navy-dark); line-height: 1.5; margin-bottom: 5px;">Провинция Гуандун, город Фошань, район Наньхай, посёлок Цзюцзян, улица Цзюцяо, участок Шицзян, ЖК/промзона «Чжаньшэн Цзяцзюй»</p>
+                <p style="font-size: 14px; color: var(--navy-muted); font-weight: 400;">Инспекции производства B2B-клиентами согласовываются заблаговременно</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 60px; border-top: 1px solid var(--border-color); padding-top: 40px;">
+            <h4 style="font-size: 13px; text-transform: uppercase; color: var(--navy-muted); margin-bottom: 25px; letter-spacing: 0.12em; font-weight: 700;">Мессенджеры</h4>
+            <div style="display: flex; gap: 15px;">
+              <a href="https://t.me/shengda_b2b" target="_blank" class="btn btn-outline" style="border-color: #26A5E4; color: #26A5E4; font-size: 11px; padding: 12px 24px;">Telegram чат</a>
+              <a href="https://wa.me/74951234567" target="_blank" class="btn btn-outline" style="border-color: #25D366; color: #25D366; font-size: 11px; padding: 12px 24px;">WhatsApp чат</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback Form Box -->
+        <div>
+          <form class="form-box" onsubmit="submitModalForm(event)">
+            <h3 style="font-family: var(--font-serif); font-size: 32px; font-weight: 300; margin-bottom: 15px; color: var(--navy-dark);">Напишите нам</h3>
+            <p style="color: var(--navy-muted); font-size: 13px; font-weight: 300; margin-bottom: 35px;">Заполните спецификацию, и мы свяжемся с вами в течение 30 минут для детальной консультации.</p>
+            
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Имя представителя *</label>
+                <input type="text" class="form-control" required placeholder="Например: Александр">
+              </div>
+              <div class="form-group">
+                <label>Название вашей компании *</label>
+                <input type="text" class="form-control" required placeholder="Например: МебельМаркет">
+              </div>
+              <div class="form-group">
+                <label>Контактный телефон *</label>
+                <input type="tel" class="form-control" required placeholder="+7 (___) ___-__-__">
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" class="form-control" required placeholder="b2b@yoursite.ru">
+              </div>
+              <div class="form-group form-full">
+                <label>Способ связи</label>
+                <select class="form-control">
+                  <option>WhatsApp сообщение</option>
+                  <option>Telegram сообщение</option>
+                  <option>Телефонный звонок</option>
+                  <option>Электронная почта (КП)</option>
+                </select>
+              </div>
+              <div class="form-group form-full">
+                <label>Суть вашего запроса</label>
+                <textarea class="form-control" placeholder="Опишите ваши задачи (например: комплектация 50 апартаментов мебелью по ТЗ, расчет стоимости доставки контейнера и т.д.)"></textarea>
+              </div>
+              <div class="form-group form-full">
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-btn">
+                    <span>📁</span> Загрузить чертежи / спецификации проекта
+                  </div>
+                  <input type="file" class="file-upload-input" multiple onchange="showToast('Файлы успешно добавлены!')">
+                </div>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 30px; padding: 18px 0;">Отправить запрос</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <div class="logo-container" style="margin-bottom: 30px;">
+            <svg width="36" height="34" viewBox="0 0 94 88" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle;">
+              <rect x="11.0683" y="67.8428" width="72.7923" height="10.2679" fill="#D0AE6F"/>
+              <path d="M93.0141 42.0738C92.6498 41.7832 92.1871 41.647 91.7263 41.6769C90.7729 41.7483 89.8015 41.9748 88.8919 42.3654C82.4541 45.6953 81.4113 52.3982 81.1403 58.123C81.0666 61.6302 81.0299 65.1504 81.0299 68.6644V72.9765C81.0314 76.1079 81.3868 81.8591 81.6315 85.8182L81.6381 85.9254C81.7034 86.9816 82.5789 87.8046 83.6372 87.8046H84.8163C85.9678 87.8046 86.8811 86.8366 86.8139 85.6871C86.5848 81.7668 86.27 75.9878 86.2688 72.9765V68.6644C86.2688 65.1504 86.2321 61.6302 86.1585 58.123L86.1577 58.0704C86.048 53.489 87.1623 47.798 90.5452 45.8253C91.0346 45.5459 91.5742 45.3449 92.164 45.2275C92.6183 45.1446 93.0338 44.9005 93.3166 44.5302C93.5995 44.1601 93.7268 43.697 93.6704 43.2395C93.614 42.7822 93.3782 42.3642 93.0141 42.0738Z" fill="#D0AE6F"/>
+              <path d="M0.669402 42.0738C1.03368 41.7832 1.49636 41.647 1.9572 41.6769C2.91054 41.7483 3.88193 41.9748 4.79152 42.3654C11.2294 45.6953 12.2722 52.3982 12.5432 58.123C12.6168 61.6302 12.6535 65.1504 12.6535 68.6644V72.9765C12.6521 76.1079 12.2967 81.8591 12.052 85.8182L12.0454 85.9254C11.9801 86.9816 11.1046 87.8046 10.0463 87.8046H8.86715C7.71566 87.8046 6.80235 86.8366 6.86953 85.6871C7.09861 81.7668 7.41345 75.9878 7.41462 72.9765V68.6644C7.41463 65.1504 7.45133 61.6302 7.52499 58.123L7.52572 58.0704C7.63546 53.489 6.52113 47.798 3.13829 45.8253C2.64883 45.5459 2.10927 45.3449 1.51941 45.2275C1.06511 45.1446 0.64965 44.9005 0.366821 44.5302C0.0839701 44.1601 -0.0432949 43.697 0.0130787 43.2395C0.0694647 42.7822 0.305276 42.3642 0.669402 42.0738Z" fill="#D0AE6F"/>
+              <path d="M12.3614 45.4111V8.39014C12.3614 6.38755 12.1987 4.90287 11.8735 3.93611C11.5483 2.90028 10.9246 2.20979 10.003 1.86446C9.81628 1.77529 9.67631 1.69572 9.55316 1.62573C9.10459 1.37057 8.88021 1.24303 7.43381 1.24303C7.32546 1.24303 7.27119 1.03583 7.27119 0.621516C7.27119 0.207202 7.32546 0 7.43381 0L10.6948 9.13591e-05L16.3304 0L22.5066 9.13591e-05L26.1529 0C26.3157 0 26.397 0.207202 26.397 0.621516C26.397 1.03583 26.3157 1.24303 26.1529 1.24303C24.7699 1.24303 24.5406 1.36682 24.082 1.61441C23.9473 1.68713 23.7929 1.77045 23.5837 1.86446C22.7164 2.20979 22.12 2.90028 21.7947 3.93611C21.5236 4.90287 21.388 6.38755 21.388 8.39014V56.1414C21.388 58.2821 21.4423 59.8013 21.5508 60.699C21.7134 61.5967 22.0657 62.1492 22.6078 62.3563C23.2042 62.4944 24.1531 62.5635 25.4542 62.5635H37.8149C39.2246 62.5635 40.2275 62.4599 40.8239 62.2527C41.4744 61.9765 41.8811 61.3895 42.0437 60.4918C42.2064 59.5251 42.2877 58.0749 42.2877 56.1414V8.39014C42.2877 6.38755 42.125 4.90287 41.7998 3.93611C41.5287 2.90028 40.9323 2.20979 40.0106 1.86446C39.8014 1.77045 39.647 1.68713 39.5124 1.61441C39.0537 1.36682 38.8244 1.24303 37.4414 1.24303C37.2788 1.24303 37.1975 1.03583 37.1975 0.621516C37.1975 0.207202 37.2788 0 37.4414 0C38.3631 0.0690674 39.5277 0 39.5277 0H43.7971H46.8604H52.6012H56.2418C56.3504 0 56.4045 0.207202 56.4045 0.621516C56.4045 1.03583 56.3504 1.24303 56.2418 1.24303C54.8589 1.24303 54.6295 1.36682 54.1709 1.61441C54.0363 1.68713 53.8819 1.77045 53.6726 1.86446C52.751 2.20979 52.1276 2.90028 51.8023 3.93611C51.4769 4.90287 51.3143 6.38755 51.3143 8.39014V56.1414C51.3143 58.2821 51.3686 59.8013 51.4769 60.699C51.6395 61.5967 51.992 62.1492 52.5341 62.3563C53.1305 62.4944 54.1064 62.5635 55.4616 62.5635H67.8225C69.3405 62.5635 70.3977 62.4599 70.9941 62.2527C71.5905 62.0456 71.9428 61.4931 72.0513 60.5954C72.214 59.6978 72.2953 58.2131 72.2953 56.1414V8.39014C72.2953 6.38755 72.1327 4.90287 71.8072 3.93611C71.5363 2.90028 70.0182 1.86446 69.8315 1.77529 69.6915 1.69572 69.5684 1.62573C69.1198 1.37057 68.8954 1.24303 67.449 1.24303C67.3405 1.24303 67.2864 1.03583 67.2864 0.621516C67.2864 0.207202 67.3405 0 67.449 0L71.1982 9.13591e-05L77.373 0H82.7521H86.1682C86.3308 0 86.4121 0.207202 86.4121 0.621516C86.4121 1.03583 86.3308 1.24303 86.1682 1.24303C84.7852 1.24303 84.5558 1.36682 84.0972 1.61441C83.9626 1.68713 83.8082 1.77045 83.599 1.86446C82.6773 2.20979 81.7285 3.93611 81.4575 4.90287 81.3219 6.38755 81.3219 8.39014V45.4109C79.0648 49.0787 78.4405 53.3538 78.2115 56.8764L78.1479 58.021L78.1472 58.0604C78.1006 60.2829 78.0686 62.5107 78.0513 64.7387H15.6318C15.6147 62.5107 15.5827 60.2829 15.5359 58.0604L15.5352 58.021L15.4716 56.8764C15.2428 53.3539 14.6185 49.0789 12.3614 45.4111Z" fill="#D0AE6F"/>
+            </svg>
+            <span class="brand-name" style="font-size: 20px;">Шэнда</span>
+          </div>
+          <p>Китайский производитель и поставщик мебели и сантехники для бизнеса в России. Готовый каталог, производство под заказ и поставка контейнерами напрямую.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="catalog.html">Каталог продукции</a></li>
+            <li><a href="custom.html">Производство под заказ</a></li>
+            <li><a href="delivery.html">Доставка и логистика</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ассортимент</h4>
+          <ul class="footer-links">
+            <li><a href="catalog.html?category=sofas">Диваны</a></li>
+            <li><a href="catalog.html?category=beds">Кровати</a></li>
+            <li><a href="catalog.html?category=wardrobes">Шкафы</a></li>
+            <li><a href="catalog.html?category=kitchens">Кухни</a></li>
+            <li><a href="catalog.html?category=sanitary">Сантехника</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Контакты B2B</h4>
+          <div class="footer-contact-item">
+            <span class="label">Офис</span>
+            <span>Москва, Гринвуд, корпус 39, этаж 3, офис 36</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="label">Завод</span>
+            <span>Гуандун, Фошань, Наньхай, Цзюцзян, Цзюцяо, Шицзян, «Чжаньшэн Цзяцзюй»</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="label">Связь</span>
+            <a href="tel:+74951234567" style="color: var(--white);">+7 (495) 123-45-67</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ООО "ШЭНДА". Все права защищены. Экспорт мебели и сантехники из Китая контейнерами.</p>
+        <div>
+          <a href="javascript:void(0)" onclick="openPopupModal('policy')" style="color: rgba(246, 244, 239, 0.5); margin-right: 25px;">Политика конфиденциальности</a>
+          <a href="javascript:void(0)" onclick="openPopupModal('agreement')" style="color: rgba(246, 244, 239, 0.5);">B2B Соглашение</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Popup Modals (Policy & B2B Agreement) -->
+  <div class="popup-modal" id="popup-policy" onclick="closePopupModal('policy')">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <button class="popup-close" onclick="closePopupModal('policy')">&times;</button>
+      <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Политика конфиденциальности</h2>
+      <p style="margin-bottom: 15px;">Настоящая Политика конфиденциальности регулирует порядок обработки и защиты персональной информации пользователей B2B платформы ООО "ШЭНДА".</p>
+      <p style="margin-bottom: 15px;">Мы собираем только минимально необходимый объем данных, требуемый для профессиональной обработки B2B-заявок, включая наименование юридического лица, ИНН, контактные данные представителя компании, адрес электронной почты и телефон.</p>
+      <p style="margin-bottom: 15px;">Все данные защищены в соответствии с Федеральным законом РФ № 152-ФЗ «О персональных данных» и обрабатываются на защищенных корпоративных серверах. Мы гарантируем, что ваши персональные и проектные данные никогда не будут переданы третьим лицам без вашего прямого согласия.</p>
+    </div>
+  </div>
+
+  <div class="popup-modal" id="popup-agreement" onclick="closePopupModal('agreement')">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <button class="popup-close" onclick="closePopupModal('agreement')">&times;</button>
+      <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">B2B Соглашение о сотрудничестве</h2>
+      <p style="margin-bottom: 15px;">Использование B2B платформы ООО "ШЭНДА" подразумевает согласие со следующими профессиональными условиями взаимодействия:</p>
+      <ul style="list-style: none; margin-bottom: 15px; display: flex; flex-direction: column; gap: 10px; font-weight: 300; font-size: 14px;">
+        <li>• Платформа ориентирована исключительно на корпоративных клиентов, индивидуальных предпринимателей и юридических лиц в РФ.</li>
+        <li>• Минимальный объем индивидуального производства по чертежам и спецификациям заказчика составляет <strong>не менее половины 20-футового контейнера</strong>.</li>
+        <li>• Все цены на готовую продукцию и стоимость фрахта калькулируются индивидуально под каждую оптовую партию и закрепляются в официальном Договоре поставки.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sticky Actions (Fixed Telegram & WhatsApp Real SVG Logos with Official Colors) -->
+  <div class="sticky-actions">
+    <a href="https://t.me/shengda_b2b" class="sticky-btn" target="_blank" style="background-color: #26A5E4; display: flex; align-items: center; justify-content: center;" title="Telegram">
+      <!-- Real uncorrupted Telegram SVG Logo -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.81 9.02L15.11 17C14.99 17.78 14.22 18.25 13.51 17.89L10.9 16L9.62 17.23C9.48 17.37 9.29 17.45 9.09 17.45H9.01C8.61 17.41 8.35 17.02 8.44 16.63L9.27 13.11L5.61 9.87C5.07 9.4 5.21 8.52 5.86 8.27L15.68 4.79C16.32 4.54 16.99 5.04 16.94 5.73L16.81 9.02Z" fill="white"/>
+      </svg>
+      <span class="sticky-tooltip">Написать в Telegram</span>
+    </a>
+    <a href="https://wa.me/74951234567" class="sticky-btn" target="_blank" style="background-color: #25D366; display: flex; align-items: center; justify-content: center;" title="WhatsApp">
+      <!-- Real uncorrupted WhatsApp SVG Logo -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.003 2C6.47 2 2 6.47 2 12C2 13.91 2.54 15.7 3.48 17.22L2.06 22.44L7.42 21.06C8.88 21.83 10.42 22.25 12.003 22.25C17.53 22.25 22 17.78 22 12.25C22.001 6.72 17.533 2.25 12.003 2ZM16.71 15.35C16.51 15.93 15.54 16.42 15.01 16.48C14.59 16.54 14.05 16.58 12.18 15.8C9.8 15.01 8.25 12.59 8.13 12.43C8.01 12.27 7.13 11.09 7.13 9.87C7.13 8.65 7.75 8.05 8 7.79C8.25 7.53 8.66 7.41 9.05 7.41C9.17 7.41 9.29 7.42 9.39 7.42C9.69 7.42 9.84 7.44 10.04 7.92C10.29 8.52 10.9 10 10.98 10.15C11.06 10.3 11.11 10.51 11.01 10.71C10.91 10.91 10.83 11.02 10.68 11.19L10.22 11.72C10.08 11.87 9.92 12.04 10.09 12.33C10.26 12.62 10.84 13.57 11.7 14.34C12.81 15.33 13.72 15.65 14.01 15.77C14.3 15.89 14.47 15.86 14.64 15.66C14.81 15.46 15.38 14.78 15.55 14.51C15.72 14.24 15.89 14.28 16.14 14.38C16.39 14.48 17.72 15.14 17.99 15.28C18.26 15.42 18.44 15.49 18.51 15.6C18.58 15.71 18.58 16.21 16.71 15.35Z" fill="white"/>
+      </svg>
+      <span class="sticky-tooltip">Написать в WhatsApp</span>
+    </a>
+    <button class="sticky-btn sticky-request" onclick="toggleRequestDrawer()">
+      REQ
+      <span class="request-badge" id="sticky-request-count">0</span>
+      <span class="sticky-tooltip">Ваш B2B запрос</span>
+    </button>
+  </div>
+
+  <!-- Custom Request List Drawer -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleRequestDrawer()"></div>
+  <div class="drawer" id="request-drawer">
+    <div class="drawer-header">
+      <h3>B2B Заявка</h3>
+      <button class="drawer-close" onclick="toggleRequestDrawer()">&times;</button>
+    </div>
+    <div class="drawer-content">
+      <div id="drawer-empty-msg" style="text-align: center; padding: 60px 0; color: var(--navy-muted);">
+        <p style="font-size: 16px; margin-bottom: 10px; font-family: var(--font-serif);">Список спецификации пуст</p>
+        <p style="font-size: 13px; font-weight: 300;">Перейдите в каталог продукции, чтобы добавить изделия в расчетный лист.</p>
+        <a href="catalog.html" class="btn btn-navy" style="margin-top: 30px; display: inline-flex; font-size: 10px; padding: 12px 24px;">Открыть каталог</a>
+      </div>
+      <div id="drawer-items-list"></div>
+    </div>
+    <div class="drawer-footer" id="drawer-footer-actions" style="display: none;">
+      <h4 style="margin-bottom: 25px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em;">Оформить спецификацию</h4>
+      <form id="drawer-request-form" onsubmit="submitDrawerRequest(event)">
+        <div class="form-group" style="margin-bottom: 15px;">
+          <input type="text" class="form-control" placeholder="Контактное лицо" required id="drawer-name">
+        </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+          <input type="text" class="form-control" placeholder="Название компании" required id="drawer-company">
+        </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+          <input type="tel" class="form-control" placeholder="Телефон" required id="drawer-phone">
+        </div>
+        <div class="form-group" style="margin-bottom: 25px;">
+          <input type="email" class="form-control" placeholder="Электронная почта" required id="drawer-email">
+        </div>
+        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 16px 0;">Отправить запрос на фабрику</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Quick Request Modal -->
+  <div id="quick-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11,31,59,0.5); z-index: 2500; display: none; align-items: center; justify-content: center; backdrop-filter: blur(15px);">
+    <div class="form-box" style="width: 100%; max-width: 550px; position: relative; box-shadow: 0 40px 80px rgba(11, 31, 59, 0.15);">
+      <button onclick="closeQuickModal()" style="position: absolute; top: 25px; right: 25px; font-size: 32px; background: none; border: none; color: var(--navy-dark); cursor: pointer; transition: var(--transition-lux);">&times;</button>
+      <h3 style="font-size: 36px; margin-bottom: 10px; font-family: var(--font-serif); font-weight: 300;" id="modal-title">Оставить заявку</h3>
+      <p style="color: var(--navy-muted); margin-bottom: 35px; font-size: 14px; font-weight: 300;" id="modal-subtitle">Оставьте ваши контакты, и наш менеджер свяжется с вами для расчета условий сотрудничества.</p>
+      
+      <form id="modal-form" onsubmit="submitModalForm(event)">
+        <input type="hidden" id="modal-subject" value="Запрос">
+        <div class="form-grid">
+          <div class="form-group form-full">
+            <label>Имя</label>
+            <input type="text" class="form-control" required placeholder="Иван Иванов">
+          </div>
+          <div class="form-group">
+            <label>Компания</label>
+            <input type="text" class="form-control" required placeholder="Название организации">
+          </div>
+          <div class="form-group">
+            <label>Телефон</label>
+            <input type="tel" class="form-control" required placeholder="+7 (999) 000-00-00">
+          </div>
+          <div class="form-group form-full">
+            <label>Email</label>
+            <input type="email" class="form-control" required placeholder="partner@company.ru">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 25px; padding: 16px 0;">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toast-notif">
+    <span id="toast-text">Товар добавлен в список заявки</span>
+  </div>
+
+  <!-- B2B App State JavaScript -->
+  <script>
+    let requestList = [];
+
+    if (localStorage.getItem('shengda_request_list')) {
+      try {
+        requestList = JSON.parse(localStorage.getItem('shengda_request_list'));
+      } catch (e) {
+        requestList = [];
+      }
+    }
+
+    function updateRequestUI() {
+      const counts = [
+        document.getElementById('header-request-count'),
+        document.getElementById('sticky-request-count')
+      ];
+      
+      const count = requestList.reduce((sum, item) => sum + item.qty, 0);
+      
+      counts.forEach(badge => {
+        if (badge) {
+          badge.textContent = count;
+          badge.style.display = count > 0 ? 'flex' : 'none';
+        }
+      });
+
+      renderDrawerItems();
+    }
+
+    function addToRequest(id, name, art, img) {
+      const existing = requestList.find(item => item.id === id);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        requestList.push({ id, name, art, img, qty: 1 });
+      }
+      localStorage.setItem('shengda_request_list', JSON.stringify(requestList));
+      updateRequestUI();
+      showToast(`Добавлено: ${name}`);
+    }
+
+    function removeFromRequest(id) {
+      requestList = requestList.filter(item => item.id !== id);
+      localStorage.setItem('shengda_request_list', JSON.stringify(requestList));
+      updateRequestUI();
+    }
+
+    function changeQty(id, delta) {
+      const item = requestList.find(item => item.id === id);
+      if (item) {
+        item.qty += delta;
+        if (item.qty <= 0) {
+          removeFromRequest(id);
+          return;
+        }
+        localStorage.setItem('shengda_request_list', JSON.stringify(requestList));
+        updateRequestUI();
+      }
+    }
+
+    function renderDrawerItems() {
+      const listEl = document.getElementById('drawer-items-list');
+      const emptyMsg = document.getElementById('drawer-empty-msg');
+      const footerActions = document.getElementById('drawer-footer-actions');
+      
+      if (!listEl) return;
+
+      if (requestList.length === 0) {
+        emptyMsg.style.display = 'block';
+        footerActions.style.display = 'none';
+        listEl.innerHTML = '';
+      } else {
+        emptyMsg.style.display = 'none';
+        footerActions.style.display = 'block';
+        
+        listEl.innerHTML = requestList.map(item => `
+          <div class="request-item">
+            <img src="${item.img}" class="request-item-img" alt="${item.name}">
+            <div class="request-item-details">
+              <div class="request-item-title">${item.name}</div>
+              <div class="request-item-art">Арт. ${item.art}</div>
+              <div class="request-item-qty">
+                <button class="qty-btn" onclick="changeQty('${item.id}', -1)">-</button>
+                <span class="qty-val">${item.qty}</span>
+                <button class="qty-btn" onclick="changeQty('${item.id}', 1)">+</button>
+              </div>
+            </div>
+            <button class="request-item-remove" onclick="removeFromRequest('${item.id}')">Удалить</button>
+          </div>
+        `).join('');
+      }
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById('toast-notif');
+      const toastTxt = document.getElementById('toast-text');
+      if (toast && toastTxt) {
+        toastTxt.textContent = text;
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3000);
+      }
+    }
+
+    function toggleRequestDrawer() {
+      const drawer = document.getElementById('request-drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      if (drawer && overlay) {
+        if (drawer.classList.contains('active')) {
+          drawer.classList.remove('active');
+          overlay.style.display = 'none';
+        } else {
+          drawer.classList.add('active');
+          overlay.style.display = 'block';
+          renderDrawerItems();
+        }
+      }
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) {
+        menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+
+    function openRequestModal(subject, customTitle = "Оставить заявку", customSubtitle = "Наш менеджер оперативно свяжется с вами для обсуждения деталей.") {
+      const modal = document.getElementById('quick-modal');
+      const title = document.getElementById('modal-title');
+      const subtitle = document.getElementById('modal-subtitle');
+      const subjectInput = document.getElementById('modal-subject');
+      
+      if (modal) {
+        title.textContent = customTitle;
+        subtitle.textContent = customSubtitle;
+        subjectInput.value = subject;
+        modal.style.display = 'flex';
+      }
+    }
+
+    function closeQuickModal() {
+      const modal = document.getElementById('quick-modal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    function submitModalForm(e) {
+      e.preventDefault();
+      alert('Запрос успешно отправлен. С вами свяжется ведущий B2B специалист.');
+      closeQuickModal();
+      e.target.reset();
+    }
+
+    function submitDrawerRequest(e) {
+      e.preventDefault();
+      const itemsText = requestList.map(item => `${item.name} (${item.art}) x${item.qty}`).join('\n');
+      alert('Спецификация направлена на фабрику.\n\nТовары:\n' + itemsText + '\n\nИнженерный отдел приступил к формированию сметы.');
+      requestList = [];
+      localStorage.removeItem('shengda_request_list');
+      updateRequestUI();
+      toggleRequestDrawer();
+      e.target.reset();
+    }
+
+    // Popup modal functionality
+    function openPopupModal(type) {
+      const modal = document.getElementById('popup-' + type);
+      if (modal) {
+        modal.style.display = 'flex';
+      }
+    }
+
+    function closePopupModal(type) {
+      const modal = document.getElementById('popup-' + type);
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const path = window.location.pathname.split("/").pop();
+      if (path === "index.html" || path === "") {
+        document.getElementById("nav-home")?.classList.add("active");
+      } else if (path === "about.html") {
+        document.getElementById("nav-about")?.classList.add("active");
+      } else if (path === "catalog.html") {
+        document.getElementById("nav-catalog")?.classList.add("active");
+      } else if (path === "custom.html") {
+        document.getElementById("nav-custom")?.classList.add("active");
+      } else if (path === "delivery.html") {
+        document.getElementById("nav-delivery")?.classList.add("active");
+      } else if (path === "contacts.html") {
+        document.getElementById("nav-contacts")?.classList.add("active");
+      }
+      updateRequestUI();
+    });
+  </script>
+</body>
+</html>
+
