@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0B1F3B">
+  <title>Шэнда — Мебель и сантехника из Китая оптом для B2B</title>
+  <meta name="description" content="">
+  <!-- Шрифты: самохостинг + запасные с подогнанными метриками.
+       Сначала объявляем Fallback (Times/Arial с override-метриками под Cormorant/Montserrat),
+       затем реальные шрифты с font-display:swap. Пока грузится веб-шрифт, текст рисуется
+       запасным в ТЕХ ЖЕ размерах строк → нет прыжка; затем бесшовно подменяется. -->
+  <link rel="preload" href="assets/fonts/montserrat-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+@font-face{font-family:'Cormorant Fallback';src:local('Times New Roman'),local('Times'),local('Nimbus Roman No9 L'),local('DejaVu Serif');size-adjust:70%;ascent-override:132.0%;descent-override:41.0%;line-gap-override:0%}
+@font-face{font-family:'Montserrat Fallback';src:local('Arial'),local('Helvetica Neue'),local('Helvetica'),local('Nimbus Sans L'),local('Liberation Sans');size-adjust:99.44%;ascent-override:97.34%;descent-override:25.24%;line-gap-override:0%}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/montserrat-cyrillic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/montserrat-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 700;font-display:swap;src:url(assets/fonts/cormorant-cyrillic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 700;font-display:swap;src:url(assets/fonts/cormorant-italic-cyrillic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 700;font-display:swap;src:url(assets/fonts/cormorant-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 700;font-display:swap;src:url(assets/fonts/cormorant-italic-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  </style>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}.hero__bg{animation:none}</style></noscript>
+  
+</head>
+<body class="">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-bar">
+      <a class="brand" href="index.html" aria-label="Шэнда — на главную">
+        <img class="sign" src="assets/logo/logo_sign_for_dark_bg.svg" alt="">
+        <img class="word" src="assets/logo/logo_name_for_dark_bg.svg" alt="Шэнда">
+      </a>
+
+      <nav class="primary-nav" aria-label="Основная навигация">
+        <a href="index.html"    class="nav-link" id="nav-home">Главная</a>
+        <a href="about.html"    class="nav-link" id="nav-about">О компании</a>
+        <a href="catalog.html"  class="nav-link" id="nav-catalog">Каталог</a>
+        <a href="custom.html"   class="nav-link" id="nav-custom">Под заказ</a>
+        <a href="delivery.html" class="nav-link" id="nav-delivery">Доставка</a>
+        <a href="contacts.html" class="nav-link" id="nav-contacts">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+79950968599" class="header-phone">+7 995 096 85 99</a>
+        <div class="header-cta">
+          <button class="btn btn-outline-gold btn-sm" onclick="Shengda.toggleDrawer()">Заявка</button>
+          <span class="req-badge" data-req-count>0</span>
+        </div>
+        <button class="nav-toggle" onclick="Shengda.toggleMenu()" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile off-canvas menu -->
+  <div class="mobile-menu" id="mobile-menu" data-close-self>
+    <div class="mobile-panel">
+      <a href="index.html"    class="m-link" id="m-nav-home">Главная <span>01</span></a>
+      <a href="about.html"    class="m-link" id="m-nav-about">О компании <span>02</span></a>
+      <a href="catalog.html"  class="m-link" id="m-nav-catalog">Каталог <span>03</span></a>
+      <a href="custom.html"   class="m-link" id="m-nav-custom">Под заказ <span>04</span></a>
+      <a href="delivery.html" class="m-link" id="m-nav-delivery">Доставка <span>05</span></a>
+      <a href="contacts.html" class="m-link" id="m-nav-contacts">Контакты <span>06</span></a>
+      <div class="mobile-contact">
+        <a href="tel:+79950968599">+7 995 096 85 99</a>
+        <a href="mailto:shengda-mebel@yandex.com">shengda-mebel@yandex.com</a>
+        <button class="btn btn-gold btn-block" onclick="Shengda.toggleMenu(false);Shengda.toggleDrawer(true)">Заявка на расчёт</button>
+      </div>
+    </div>
+  </div>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80')"></div>
+    <div class="container hero__inner">
+      <span class="eyebrow" data-reveal>Китайский поставщик и производитель мебели и сантехники</span>
+      <h1 data-reveal data-d="1">Мебель и сантехника<br>из Китая <em>для вашего бизнеса</em></h1>
+      <p data-reveal data-d="2">Готовый каталог изделий и производство по индивидуальным спецификациям, чертежам и дизайн-проектам. Поставки контейнерами напрямую с фабрики в Фошане для оптовых компаний, девелоперов, дизайнеров и отельеров в России.</p>
+      <div class="hero-actions" data-reveal data-d="3">
+        <a href="catalog.html" class="btn btn-gold">Открыть каталог</a>
+        <button class="btn btn-outline-gold" onclick="Shengda.openModal('Первый экран','Рассчитать поставку','Опишите задачи — рассчитаем стоимость контейнерной партии с логистикой.')">Рассчитать поставку</button>
+      </div>
+
+      <div class="hero-stats" data-reveal data-d="4">
+        <div class="hero-stat"><div class="num"><span data-count="30">0</span></div><div class="lbl">лет фабричной истории</div></div>
+        <div class="hero-stat"><div class="num"><span data-count="200" data-suffix="+">0</span></div><div class="lbl">готовых моделей</div></div>
+        <div class="hero-stat"><div class="num" style="font-size:clamp(26px,3vw,38px)">Фошань</div><div class="lbl">центр индустрии</div></div>
+        <div class="hero-stat"><div class="num"><span data-count="30">0</span></div><div class="lbl">дней транзит в РФ</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Segments ===== -->
+  <section>
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Сегменты рынка</span>
+        <h2>Архитектурный подход<br>к вашему сегменту</h2>
+        <p>Шэнда решает сложные задачи комплектации на профессиональном уровне — от серийной мебели до авторских изделий.</p>
+      </div>
+      <div class="grid g-5">
+        <div class="card card--seg" data-reveal data-d="1"><div class="card__body"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><path d="M9 22V12h6v10"/></svg></div><h3>Мебельные салоны</h3><p>Стабильные поставки, неизменная геометрия, премиальная фурнитура и эксклюзивные материалы.</p></div></div>
+        <div class="card card--seg" data-reveal data-d="2"><div class="card__body"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="2" width="20" height="20"/><path d="M9 22V12h6v10M12 2v10"/></svg></div><h3>Застройщики</h3><p>Комплектация квартир и апартаментов «под ключ» с жёсткими стандартами износостойкости.</p></div></div>
+        <div class="card card--seg" data-reveal data-d="3"><div class="card__body"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></div><h3>Дизайн-студии</h3><p>Точное воплощение 3D-визуализаций. Кастомизация габаритов, шпона, структуры камня и латуни.</p></div></div>
+        <div class="card card--seg" data-reveal data-d="4"><div class="card__body"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 22V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v17M22 22V11a2 2 0 0 0-2-2h-2M6 12h4M6 16h4"/></svg></div><h3>Отели и гостиницы</h3><p>Серийный выпуск мебели и надёжной сантехники с сертификатами огнестойкости и влагозащиты.</p></div></div>
+        <div class="card card--seg" data-reveal data-d="4"><div class="card__body"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18"/><path d="M21 9H3M21 15H3M12 3v18"/></svg></div><h3>Бизнес-центры</h3><p>Эргономичная мебель для лобби, переговорных и санузлов представительского уровня.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Categories ===== -->
+  <section class="bg-paper">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Категории ассортимента</span>
+        <h2>Предметная палитра<br>для пространств</h2>
+        <p>Интеграция готовых моделей и проектных разработок в единой контейнерной поставке.</p>
+      </div>
+      <div class="grid g-3" style="margin-bottom:28px">
+        <a class="cat-card" href="catalog.html?category=sofas" data-reveal data-d="1"><div class="cat-card__media"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80" alt="Диваны" loading="lazy"></div><div class="cat-card__body"><h3>Диваны</h3><p>Модульные системы, глубокая посадка, прочные каркасы из твердых пород.</p><span class="tlink">Исследовать</span></div></a>
+        <a class="cat-card" href="catalog.html?category=beds" data-reveal data-d="2"><div class="cat-card__media"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="Кровати" loading="lazy"></div><div class="cat-card__body"><h3>Кровати</h3><p>Эргономичные боксы для отелей и кровати с мягким велюровым изголовьем.</p><span class="tlink">Исследовать</span></div></a>
+        <a class="cat-card" href="catalog.html?category=wardrobes" data-reveal data-d="3"><div class="cat-card__media"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=80" alt="Шкафы" loading="lazy"></div><div class="cat-card__body"><h3>Шкафы</h3><p>Гардеробные системы, шпонированные фасады, интегрированная автоматика.</p><span class="tlink">Исследовать</span></div></a>
+      </div>
+      <div class="grid g-2">
+        <a class="cat-card" href="catalog.html?category=kitchens" data-reveal data-d="1"><div class="cat-card__media"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=80" alt="Кухни" loading="lazy"></div><div class="cat-card__body"><h3>Кухни</h3><p>Проектные кухни для ЖК с фурнитурой европейских брендов и каменными топами.</p><span class="tlink">Исследовать</span></div></a>
+        <a class="cat-card" href="catalog.html?category=sanitary" data-reveal data-d="2"><div class="cat-card__media"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Сантехника" loading="lazy"></div><div class="cat-card__body"><h3>Сантехника</h3><p>Смесители PVD, безободковые инсталляции, отдельностоящие ванны.</p><span class="tlink">Исследовать</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== B2B platform feature ===== -->
+  <section>
+    <div class="container">
+      <div class="split">
+        <div data-reveal>
+          <span class="eyebrow">Прямой импорт</span>
+          <h2 class="serif" style="font-size:clamp(30px,4vw,50px);margin:18px 0 24px">Прогрессивная B2B-платформа поставок</h2>
+          <p class="lead" style="margin-bottom:30px">В отличие от розничных маркетплейсов, мы ориентированы исключительно на контейнерные партии и проектную комплектацию. Это позволяет оптимизировать себестоимость и предлагать прямые оптовые цены без посреднических наценок.</p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap">
+            <button class="btn btn-gold" onclick="Shengda.openModal('Запрос PDF','Получить PDF-каталог','Оставьте контакты — направим расширенную версию каталога на почту.')">Получить каталог PDF</button>
+            <a href="catalog.html" class="btn btn-outline">Перейти в каталог</a>
+          </div>
+        </div>
+        <div data-reveal data-d="2">
+          <div class="split__media">
+            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=900&q=80" alt="B2B каталог">
+            <div class="badge-float"><div class="t serif">Как устроен каталог?</div><p>Добавляйте модели в спецификацию, отправляйте на калькуляцию — отдел ВЭД подготовит персональную смету с доставкой до склада.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Bespoke production (dark) ===== -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" style="color:var(--gold)">Индивидуальный заказ</span>
+        <h2>Кастомное производство под ваши чертежи и референсы</h2>
+        <p>Шэнда — это не только готовый каталог. Мы адаптируем или полностью воссоздадим изделия любой сложности на фабрике в Гуандуне.</p>
+      </div>
+      <div class="grid g-3" style="margin-bottom:50px">
+        <div class="feat-card" data-reveal data-d="1">
+          <div class="feat-card__head">
+            <div class="feat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 8.7L8.7 21.3a2.4 2.4 0 0 1-3.4 0L2.7 18.7a2.4 2.4 0 0 1 0-3.4L15.3 2.7a2.4 2.4 0 0 1 3.4 0l2.6 2.6a2.4 2.4 0 0 1 0 3.4Z"/><path d="M7.5 10.5l6 6M10.5 7.5l6 6"/></svg></div>
+            <div class="feat-card__num">01</div>
+          </div>
+          <h3 class="serif">По размерам</h3>
+          <p>Корректировка габаритов, глубины, жёсткости и высоты изголовья под планировку апартаментов.</p>
+        </div>
+        <div class="feat-card" data-reveal data-d="2">
+          <div class="feat-card__head">
+            <div class="feat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+            <div class="feat-card__num">02</div>
+          </div>
+          <h3 class="serif">По чертежам</h3>
+          <p>Производство по конструкторским сечениям и разрезам разделов АР и АДИ в строгом соответствии с ТЗ.</p>
+        </div>
+        <div class="feat-card" data-reveal data-d="3">
+          <div class="feat-card__head">
+            <div class="feat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="feat-card__num">03</div>
+          </div>
+          <h3 class="serif">По фото</h3>
+          <p>Воссоздание дизайнерской мебели европейских фабрик с сохранением премиального качества материалов.</p>
+        </div>
+      </div>
+      <div class="center" data-reveal><a href="custom.html" class="btn btn-gold">Отправить проект на расчёт</a></div>
+    </div>
+  </section>
+
+  <!-- ===== Why Shengda ===== -->
+  <section class="bg-paper">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Наши преимущества</span>
+        <h2>Почему профессионалы выбирают Шэнда</h2>
+        <p>Прямой китайский производитель — это кристальная прозрачность сметы и полный контроль процессов.</p>
+      </div>
+      <div class="grid g-3">
+        <div class="stat-card" data-reveal data-d="1"><div class="big"><span data-count="30">0</span></div><h3>30 лет опыта</h3><p>Завод в Фошане функционирует три десятилетия — отлаженные технологические карты и надёжность сборки.</p></div>
+        <div class="stat-card" data-reveal data-d="2"><div class="big"><span data-count="200" data-suffix="+">0</span></div><h3>Готовый каталог</h3><p>Постоянно обновляемая коллекция мебели и сантехники для быстрой комплектации и минимизации сроков.</p></div>
+        <div class="stat-card" data-reveal data-d="3"><div class="big serif" style="font-size:48px">B2B</div><h3>Индивидуальный опт</h3><p>Цены и условия фрахта рассчитываются индивидуально под объём партии и географию вашего склада.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Steps ===== -->
+  <section>
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow center">Порядок взаимодействия</span>
+        <h2>Системный путь от идеи к контейнеру</h2>
+        <p>Каждый этап движения груза регламентирован и прозрачен для заказчика.</p>
+      </div>
+      <div class="steps">
+        <div class="step" data-reveal><div class="step__num">01</div><div><h3>Заявка или ТЗ</h3><p>Вы направляете чертежи, спецификации или выбираете артикулы из каталога.</p></div></div>
+        <div class="step" data-reveal><div class="step__num">02</div><div><h3>Уточнение задачи</h3><p>B2B-менеджер детально прорабатывает запрос: объёмы, кастомизацию и логистические требования.</p></div></div>
+        <div class="step" data-reveal><div class="step__num">03</div><div><h3>Согласование и производство</h3><p>Утверждение образцов шпона, выкрасов латуни, тканей. Запуск производственной цепочки в Гуандуне.</p></div></div>
+        <div class="step" data-reveal><div class="step__num">04</div><div><h3>Контейнерный фрахт</h3><p>Усиленная экспортная упаковка, загрузка контейнера, таможня и доставка на ваш склад.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quality ===== -->
+  <section class="bg-paper">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Гарантия качества</span>
+        <h2>Экспортный контроль и упаковка</h2>
+        <p>Исключаем возможность повреждений во время мультимодального транзита.</p>
+      </div>
+      <div class="grid g-3">
+        <div class="card" data-reveal data-d="1"><div class="card__body"><h3>Технический аудит</h3><p>Инженеры фабрики проверяют все сборочные карты и допуски до запуска производства.</p></div></div>
+        <div class="card" data-reveal data-d="2"><div class="card__body"><h3>Экспортный конструктив</h3><p>Пятислойный гофрокартон повышенной плотности, демпферы и жёсткие ящики для стекла и камня.</p></div></div>
+        <div class="card" data-reveal data-d="3"><div class="card__body"><h3>Фотофиксация</h3><p>Подготовка фото- и видеоотчётов по итогам сборки и опломбирования контейнера.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Lead capture ===== -->
+  <section>
+    <div class="container">
+      <div class="split split--top">
+        <div data-reveal>
+          <span class="eyebrow">Сотрудничество</span>
+          <h2 class="serif" style="font-size:clamp(30px,4vw,50px);margin:18px 0 24px">Давайте обсудим спецификацию</h2>
+          <p class="lead" style="margin-bottom:34px">Оставьте реквизиты или приложите файлы проекта. Инженерный отдел и декларанты ВЭД подготовят комплексное предложение с учётом производства и фрахта.</p>
+
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <a href="tel:+79950968599" class="lead-card">
+              <span class="lead-card__ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span>
+              <span class="lead-card__txt"><small>Телефон отдела продаж</small>+7 (995) 096-85-99</span>
+            </a>
+            <a href="mailto:shengda-mebel@yandex.com" class="lead-card">
+              <span class="lead-card__ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16"/><path d="M2 6l10 7L22 6"/></svg></span>
+              <span class="lead-card__txt"><small>Электронная почта</small>shengda-mebel@yandex.com</span>
+            </a>
+            <a href="https://t.me/shengdamebel" target="_blank" rel="noopener" class="lead-card">
+              <span class="lead-card__ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.4 8.4 0 0 1-1 4 8.5 8.5 0 0 1-7.6 4.5 8.4 8.4 0 0 1-4-1L3 21l2-4.5a8.4 8.4 0 0 1-1-4 8.5 8.5 0 0 1 4.5-7.6 8.4 8.4 0 0 1 4-1h.5a8.5 8.5 0 0 1 8 8z"/></svg></span>
+              <span class="lead-card__txt"><small>Мессенджеры</small>Telegram · WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div data-reveal data-d="2">
+          <div class="form-card form-card--compact" id="home-form-wrap">
+            <h3 class="serif" style="font-size:clamp(24px,2.4vw,32px);margin-bottom:6px">Запрос на расчёт спецификации</h3>
+            <p style="margin-bottom:22px;font-size:14px">Заполните форму — подготовим персональное предложение.</p>
+            <form onsubmit="Shengda.handleSubmit(event)">
+              <div class="form-grid">
+                <div class="field"><label>Имя *</label><input name="name" class="input" type="text" required placeholder="Константин"></div>
+                <div class="field"><label>Компания *</label><input name="company" class="input" type="text" required placeholder="ООО Девелопмент"></div>
+                <div class="field"><label>Телефон *</label><input name="phone" class="input" type="tel" required placeholder="+7 (___) ___-__-__"></div>
+                <div class="field"><label>Email *</label><input name="email" class="input" type="email" required placeholder="b2b@dev.ru"></div>
+                <div class="field form-full"><label>Кто вы?</label><select name="role" class="input"><option>Застройщик / Девелопер</option><option>Мебельный салон</option><option>Дизайн-студия</option><option>Отельер</option><option>Другое</option></select></div>
+                <div class="field form-full"><label>ТЗ / комментарий</label><textarea name="message" class="input" placeholder="Опишите задачи, объём партии, категории товаров..."></textarea></div>
+                <div class="field form-full"><div class="field-file"><label class="drop"><span class="clip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg></span> Загрузить проектные файлы / ТЗ / реквизиты</label><input type="file" multiple></div></div>
+              </div>
+              <button type="submit" class="btn btn-gold btn-block" style="margin-top:6px">Отправить запрос на расчёт</button>
+            </form>
+            <div class="form-success">
+              <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <h4>Запрос отправлен</h4>
+              <p>Спасибо! Мы свяжемся с вами для подготовки расчёта.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <a class="brand" href="index.html">
+            <img class="sign" src="assets/logo/logo_sign_for_dark_bg.svg" alt="">
+            <img class="word" src="assets/logo/logo_name_for_dark_bg.svg" alt="Шэнда">
+          </a>
+          <p>Китайский производитель и поставщик мебели и сантехники для бизнеса в России. Готовый каталог, производство под заказ и поставка контейнерами напрямую с фабрики в Фошане.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="catalog.html">Каталог продукции</a></li>
+            <li><a href="custom.html">Производство под заказ</a></li>
+            <li><a href="delivery.html">Доставка и логистика</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ассортимент</h4>
+          <ul class="footer-links">
+            <li><a href="catalog.html?category=sofas">Диваны</a></li>
+            <li><a href="catalog.html?category=beds">Кровати</a></li>
+            <li><a href="catalog.html?category=mattresses">Матрасы</a></li>
+            <li><a href="catalog.html?category=chairs">Кресла</a></li>
+            <li><a href="catalog.html?category=wardrobes">Шкафы</a></li>
+            <li><a href="catalog.html?category=kitchens">Кухни</a></li>
+            <li><a href="catalog.html?category=sanitary">Сантехника</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Контакты B2B</h4>
+          <div class="f-contact"><span class="lbl">Офис</span><span>Москва, Гринвуд, корпус 39, этаж 3, офис 36</span></div>
+          <div class="f-contact"><span class="lbl">Завод</span><span>Гуандун, Фошань, Наньхай, Цзюцзян — «Чжаньшэн Цзяцзюй»</span></div>
+          <div class="f-contact"><span class="lbl">Связь</span><a href="tel:+79950968599" style="color:#fff">+7 (995) 096-85-99</a></div>
+          <div class="f-contact"><span class="lbl">Почта</span><a href="mailto:shengda-mebel@yandex.com" style="color:#fff">shengda-mebel@yandex.com</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> ООО «ШЭНДА». Экспорт мебели и сантехники из Китая контейнерами.</p><br>Разработка сайта — <a href="https://crofton.pro" target="_blank" rel="noopener" style="color:rgba(246,244,239,.6)">Crofton.pro</a>
+        <div>
+          <a href="#" onclick="Shengda.openPopup('policy');return false;">Политика конфиденциальности</a>
+          &nbsp;&nbsp;·&nbsp;&nbsp;
+          <a href="#" onclick="Shengda.openPopup('agreement');return false;">B2B Соглашение</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Popup: policy -->
+  <div class="modal" id="popup-policy" data-close-self>
+    <div class="modal__box modal__box--wide">
+      <button class="modal__close" data-close="popup-policy">&times;</button>
+      <h2>Политика конфиденциальности</h2>
+      <p>Настоящая Политика конфиденциальности регулирует порядок обработки и защиты персональной информации пользователей B2B-платформы ООО «ШЭНДА».</p>
+      <p>Мы собираем только минимально необходимый объём данных, требуемый для обработки B2B-заявок: наименование юридического лица, ИНН, контактные данные представителя, электронная почта и телефон.</p>
+      <p>Все данные защищены в соответствии с Федеральным законом РФ № 152-ФЗ «О персональных данных» и обрабатываются на защищённых корпоративных серверах. Мы гарантируем, что ваши персональные и проектные данные никогда не будут переданы третьим лицам без прямого согласия.</p>
+    </div>
+  </div>
+
+  <!-- Popup: agreement -->
+  <div class="modal" id="popup-agreement" data-close-self>
+    <div class="modal__box modal__box--wide">
+      <button class="modal__close" data-close="popup-agreement">&times;</button>
+      <h2>B2B Соглашение о сотрудничестве</h2>
+      <p>Использование B2B-платформы ООО «ШЭНДА» подразумевает согласие со следующими условиями взаимодействия:</p>
+      <ul>
+        <li>• Платформа ориентирована исключительно на корпоративных клиентов, ИП и юридических лиц в РФ.</li>
+        <li>• Минимальный объём индивидуального производства по чертежам и спецификациям заказчика — <strong>не менее половины 20-футового контейнера</strong>.</li>
+        <li>• Все цены на готовую продукцию и стоимость фрахта калькулируются индивидуально под каждую оптовую партию и закрепляются в официальном Договоре поставки.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Quick request modal -->
+  <div class="modal" id="quick-modal" data-close-self>
+    <div class="modal__box">
+      <button class="modal__close" onclick="Shengda.closeModal()">&times;</button>
+      <div id="modal-form-wrap">
+        <h3 class="serif" id="modal-title" style="font-size:32px;margin-bottom:8px">Оставить заявку</h3>
+        <p id="modal-subtitle" style="margin-bottom:30px">Оставьте контакты — менеджер свяжется для расчёта условий сотрудничества.</p>
+        <form onsubmit="Shengda.handleSubmit(event)">
+          <input type="hidden" id="modal-subject" value="Запрос">
+          <div class="form-grid">
+            <div class="field form-full"><label>Имя</label><input name="name" class="input" type="text" required placeholder="Иван Иванов"></div>
+            <div class="field"><label>Компания</label><input name="company" class="input" type="text" required placeholder="Название организации"></div>
+            <div class="field"><label>Телефон</label><input name="phone" class="input" type="tel" required placeholder="+7 (999) 000-00-00"></div>
+            <div class="field form-full"><label>Email</label><input name="email" class="input" type="email" required placeholder="partner@company.ru"></div>
+          </div>
+          <button type="submit" class="btn btn-gold btn-block" style="margin-top:8px">Отправить запрос</button>
+        </form>
+      </div>
+      <div class="form-success">
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h4>Заявка отправлена</h4>
+        <p>Спасибо! Ведущий B2B-специалист свяжется с вами в ближайшее время.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Request drawer -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="Shengda.toggleDrawer(false)"></div>
+  <aside class="drawer" id="request-drawer">
+    <div class="drawer__head">
+      <h3 class="serif">B2B Заявка</h3>
+      <button class="drawer__close" onclick="Shengda.toggleDrawer(false)">&times;</button>
+    </div>
+    <div class="drawer__body">
+      <div class="drawer__empty" id="drawer-empty">
+        <div class="ic">⋎</div>
+        <h4 class="serif">Список спецификации пуст</h4>
+        <p style="font-size:13px">Перейдите в каталог, чтобы добавить изделия в расчётный лист.</p>
+        <a href="catalog.html" class="btn btn-navy btn-sm" style="margin-top:24px">Открыть каталог</a>
+      </div>
+      <div id="drawer-items"></div>
+    </div>
+    <div class="drawer__foot" id="drawer-foot" style="display:none">
+      <h4 style="font-size:11px;text-transform:uppercase;letter-spacing:.15em;margin-bottom:18px">Оформить спецификацию</h4>
+      <div id="drawer-form-wrap">
+        <form onsubmit="Shengda.submitDrawer(event)">
+          <div class="field" style="margin-bottom:14px"><input class="input" type="text" required name="name" placeholder="Контактное лицо"></div>
+          <div class="field" style="margin-bottom:14px"><input class="input" type="text" required name="company" placeholder="Компания"></div>
+          <div class="field" style="margin-bottom:14px"><input class="input" type="tel" required name="phone" placeholder="Телефон"></div>
+          <div class="field" style="margin-bottom:22px"><input class="input" type="email" required name="email" placeholder="Email"></div>
+          <button type="submit" class="btn btn-gold btn-block">Отправить на фабрику</button>
+        </form>
+      </div>
+      <div class="form-success">
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h4>Спецификация отправлена</h4>
+        <p>Состав: <span data-items></span></p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Floating messenger actions -->
+  <div class="fab">
+    <a class="fab__btn fab-tg" href="https://t.me/shengdamebel" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+      <img src="assets/telegram.svg" alt="Telegram">
+      <span class="fab__tip">Telegram</span>
+    </a>
+    <a class="fab__btn fab-wa" href="https://wa.me/74951234567" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+      <img src="assets/whatsapp.svg" alt="WhatsApp">
+      <span class="fab__tip">WhatsApp</span>
+    </a>
+    <button class="fab__btn fab-req" onclick="Shengda.toggleDrawer()" aria-label="Заявка">REQ<span class="req-badge" data-req-count>0</span></button>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

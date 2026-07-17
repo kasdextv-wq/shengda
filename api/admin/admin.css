@@ -1,0 +1,67 @@
+/* Админ-панель Шэнда — компактный фирменный стиль */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:15px/1.6 -apple-system,'Segoe UI',Roboto,sans-serif;background:#F6F4EF;color:#0B1F3B}
+a{color:#0B1F3B}
+
+.topbar{background:#0B1F3B;color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.topbar__in{max-width:1180px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:28px;height:60px}
+.topbar .brand{color:#D0AE6F;font-size:15px;letter-spacing:.04em;text-decoration:none}
+.topnav{display:flex;gap:22px;margin-left:auto}
+.topnav a{color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;font-weight:500;padding:4px 0;border-bottom:2px solid transparent}
+.topnav a.active{color:#D0AE6F;border-bottom-color:#D0AE6F}
+.topnav a:hover{color:#fff}
+.topbar .out{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px}
+.topbar .out:hover{color:#fff}
+
+.wrap{max-width:1180px;margin:0 auto;padding:32px 24px}
+
+h1{font-size:24px;margin-bottom:4px}
+.sub{color:#4A607B;margin-bottom:24px;font-size:14px}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:30px}
+.stat{background:#fff;border:1px solid rgba(11,31,59,.1);border-radius:8px;padding:20px}
+.stat .n{font-size:30px;font-weight:700;color:#D0AE6F}
+.stat .l{font-size:12px;color:#4A607B;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+
+.card{background:#fff;border:1px solid rgba(11,31,59,.1);border-radius:8px;padding:22px;margin-bottom:20px}
+.card h2{font-size:18px;margin-bottom:16px}
+
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:12px 10px;border-bottom:1px solid rgba(11,31,59,.08);vertical-align:top}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#4A607B}
+tr:hover{background:#FBFAF6}
+
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.b-new{background:#eaf6ef;color:#1a7d4f}
+.b-proc{background:#fff6e0;color:#9a6a00}
+.b-done{background:#eef0f4;color:#4A607B}
+
+.btn{display:inline-block;background:#D0AE6F;color:#0B1F3B;padding:9px 18px;border:0;border-radius:4px;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.btn:hover{background:#B59353}
+.btn-sm{padding:5px 11px;font-size:11px}
+.btn-out{background:transparent;color:#0B1F3B;border:1px solid #0B1F3B}
+.btn-out:hover{background:#0B1F3B;color:#fff}
+.btn-red{background:transparent;color:#a52a2a;border:1px solid #d9a3a0}
+.btn-red:hover{background:#a52a2a;color:#fff}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+
+form.grid label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#4A607B;margin:14px 0 5px}
+form.grid input,form.grid select,form.grid textarea{width:100%;padding:10px 12px;border:1px solid #C9BFAF;border-radius:4px;font:inherit}
+form.grid textarea{min-height:80px;resize:vertical}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 20px}
+.field-full{grid-column:1/-1}
+checkbox-wrap{display:flex;align-items:center;gap:8px}
+.msg{padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:14px}
+.msg-ok{background:#eaf6ef;color:#1a7d4f}
+.msg-err{background:#fbeeee;color:#a52a2a}
+.thumb{width:60px;height:60px;object-fit:cover;border-radius:4px;border:1px solid rgba(11,31,59,.1)}
+
+.lead-detail{background:#FBFAF6;border:1px solid rgba(11,31,59,.1);border-radius:8px;padding:22px;margin-bottom:16px}
+.lead-detail dt{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#4A607B;margin-top:14px}
+.lead-detail dt:first-child{margin-top:0}
+.lead-detail dd{margin:0 0 4px;font-size:15px;white-space:pre-wrap;word-break:break-word}
+.tg-yes{color:#1a7d4f}.tg-no{color:#a52a2a}
+.muted{color:#4A607B;font-size:13px}
+
+@media(max-width:720px){.stats{grid-template-columns:1fr 1fr}.grid2,.grid3{grid-template-columns:1fr}.topbar__in{gap:14px}.topnav{gap:14px}}
